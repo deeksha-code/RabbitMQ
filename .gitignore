@@ -1,3 +1,6 @@
 infoMs/node_modules/
 loggerMs/node_modules/
 warningAndErrorMs/node_modules/
+infoMs/package-lock.json
+loggerMs/package-lock.json
+warningAndErrorMs/package-lock.json
