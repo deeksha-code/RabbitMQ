@@ -15,6 +15,7 @@ class Producer {
   }
 
   async publishMessage(routingKey, message) {
+    console.log("entered publish message")
     if (!this.channel) {
       await this.createChannel();
     }
@@ -27,7 +28,7 @@ class Producer {
       message: message,
       dateTime: new Date(),
     };
-    await this.channel.publish(
+     this.channel.publish(
       exchangeName,
       routingKey,
       Buffer.from(JSON.stringify(logDetails))
@@ -40,3 +41,5 @@ class Producer {
 }
 
 module.exports = Producer;
+
+
